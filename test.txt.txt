@@ -1,0 +1,53 @@
+Ans1 :
+
+def sum(list):
+    res = 0
+    for i in list:
+        res = res+i
+    return res
+
+list = []
+n = int(input('Enter the length of the list'))
+for i in range(0,n):
+    element = int(input('Enter the element'))
+    list.append(element)
+
+Result = sum(list)
+print(Result)
+
+Ans2 :
+
+def Maximum_ones(arr,n):
+    count = 0
+    result =0
+    for i in range(0,n):
+        if(arr[i]==0):
+            count = 0
+        else:
+            count+=1
+            result = max(result,count)
+    return result
+
+arr = [0,0,0,1,1,1,0,0,0,1,1,0,1,1,1,1,0,0,1,1]
+n = len(arr)
+print(Maximum_ones(arr,n))
+
+Ans3 :
+
+import pickle
+def Max_value(dict1):
+       data = max(zip(dict1.keys(), dict1.values()))
+       f = open("D:/mydata.txt","wb")
+       pickle.dump(data,f)
+       f.close
+
+
+dict1 = {}
+n = int(input("enter the range"))
+for i in range(n):
+    key = input('enetr the key')
+    value = input('enter the value')
+    dict1.update({key: value})
+print(dict1)
+x = Max_value(dict1)
+
